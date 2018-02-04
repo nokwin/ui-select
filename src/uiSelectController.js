@@ -473,6 +473,14 @@ uis.controller('uiSelectCtrl',
     }, 0, false);
   };
 
+  ctrl.delete = function($event) {
+    $event.stopPropagation();
+
+    if(angular.isDefined(this.onDeleteCallback)) {
+      $scope.$eval(this.onDeleteCallback);
+    }
+  };
+
   // Toggle dropdown
   ctrl.toggle = function(e) {
     if (ctrl.open) {
