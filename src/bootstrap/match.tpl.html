@@ -14,7 +14,7 @@
     </a>
   </span>
   <a ng-show="$select.allowDelete && ($select.disabled !== true)" aria-label="{{ $select.baseTitle }} clear"
-     ng-click="$select.delete($event)" class="btn btn-xs btn-link pull-right delete-button" title="Удалить">
+     ng-click="$select.delete($event)" class="btn btn-xs btn-link pull-right delete-button" data-toggle="tooltip" data-placement="top" title="Удалить">
     <i class="glyphicon glyphicon-minus" aria-hidden="true"></i>
   </a>
 </div>
